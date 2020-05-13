@@ -31,4 +31,4 @@ jobs:
         echo Exiting with 0;
         exit 0;
     - name: find Sun text in file
-      run: grep -q "Sun" sdk/compute/placeholderFile
+      run: grep -q "Sun" sdk/compute/placeholderFile.txt
