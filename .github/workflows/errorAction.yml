@@ -18,3 +18,5 @@ jobs:
       run: echo "core.setFailed('error set failed')"
     - name: setFailed attempt no quotes
       run: core.setFailed('error set failed')
+    - name: Error no Echo
+      run: ::error::Error is thrown here message
