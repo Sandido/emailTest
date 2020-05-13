@@ -13,4 +13,6 @@ jobs:
     - name: Generate Error
       run: echo "::error::Error is thrown here message"
     - name: Generate Warning
-      run: echo "warning ::Warning throw message"
+      run: echo "::warning ::Warning throw message"
+    - name: setFailed attempt
+      run: echo "core.setFailed('error set failed')"
