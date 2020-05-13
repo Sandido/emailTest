@@ -30,3 +30,5 @@ jobs:
         echo pull request succeeded;
         echo Exiting with 0;
         exit 0;
+    - name: find Sun text in file
+      run: grep -q "Sun" placeholderFile
