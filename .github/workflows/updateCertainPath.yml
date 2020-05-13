@@ -1,12 +1,13 @@
 name: updateCertainPath
 
 on: 
-  pull_request:
-    paths: 
-    - 'sdk/compute/**'
   push:
     paths:
     - 'sdk/compute/**'
+  pull_request:
+    paths: 
+    - 'sdk/compute/**'
+
    
 jobs:
   build:
