@@ -6,7 +6,7 @@ on:
     - 'sdk/compute/**'
   push:
     paths:
-      - 'sdk/compute/**'
+    - 'sdk/compute/**'
    
 jobs:
   build:
