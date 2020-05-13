@@ -12,3 +12,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Generate Error
       run: echo "::error::Error is thrown here message"
+    - name: Generate Warning
+      run: echo "warning ::Warning throw message"
