@@ -1,0 +1,19 @@
+name: conditions
+on: 
+  pull_request:
+    branches: [master]
+
+jobs: 
+  build:
+    runs-on: ubuntu-latest
+    
+    steps: 
+    - uses: actions/checkout@v2
+    - name: condition if push
+      if: ${{ github.event_name == 'push' }}
+      run: echo push check succeeded
+    - name: condition if pull_request
+      if: ${{ github.event_name == 'pull_request' }}
+      run: echo pull request succeeded
+
+
