@@ -3,7 +3,7 @@ name: updateCertainPath
 on: 
   pull_request:
     paths: 
-    - 'emailTest/sdk/compute/**'
+    - 'sdk/compute/**'
    
 jobs:
   build:
