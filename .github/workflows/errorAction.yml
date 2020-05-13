@@ -17,4 +17,4 @@ jobs:
     - name: setFailed attempt
       run: echo "core.setFailed('error set failed')"
     - name: setFailed attempt no quotes
-      run: echo core.setFailed('error set failed')
+      run: core.setFailed('error set failed')
