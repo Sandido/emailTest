@@ -16,5 +16,3 @@ jobs:
       run: echo "::warning ::Warning throw message"
     - name: setFailed attempt
       run: echo "core.setFailed('error set failed')"
-    - name: Error no Echo no colons
-      run: error Error is thrown here message
