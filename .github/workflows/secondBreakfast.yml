@@ -1,0 +1,16 @@
+name: 2ndWorkflow
+
+on: 
+  pull_request:
+    branches: [master]
+   
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps: 
+    - uses: actions/checkout@v2
+    - name: 2nd Breakfast
+      run: echo Eating breakfast!
+      
+      
