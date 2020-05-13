@@ -20,3 +20,7 @@ jobs:
       run: core.setFailed('error set failed')
     - name: Error no Echo
       run: ::error::Error is thrown here message
+    - name: Error no Echo no starting colons
+      run: error::Error is thrown here message
+    - name: Error no Echo no colons
+      run: error Error is thrown here message
