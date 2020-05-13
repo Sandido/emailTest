@@ -1,0 +1,15 @@
+name: updateCertainPath
+
+on: 
+  pull_request:
+    paths: 
+    - 'emailTest/sdk/compute/**'
+   
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps: 
+    - uses: actions/checkout@v2
+    - name: CertainPathUpdated
+      run: echo only the certain path updated
