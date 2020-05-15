@@ -1,0 +1,27 @@
+name: demoSimpleAction
+
+on:
+  pull_request:
+    paths:
+    - 'sdk/compute/**'
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: EchoWords
+      run: echo This was a step
+      
+    - name: ConditionalFail
+      if: ${{ github.event_name == 'push' }}
+      run: echo This text should appear during a Push
+      exit 1;
+      
+    - name: ConditionalSuccess
+      if: ${{ github.event_name == 'pull_request' }}
+      run: echo This text should appear during PR creation
+      
+    - name: Check a file has certain text
+      run: grep -q "Demo" Readme.md
