@@ -14,14 +14,14 @@ jobs:
     - name: EchoWords
       run: echo This was a step
       
-    - name: ConditionalFail
+    - name: ConditionalPush
       if: ${{ github.event_name == 'push' }}
       run: echo This text should appear during a Push;
         exit 1;
       
-    - name: ConditionalSuccess
+    - name: ConditionalPR
       if: ${{ github.event_name == 'pull_request' }}
       run: echo This text should appear during PR creation
       
-    - name: Check a file has certain text
+    - name: Check README has Demo text
       run: grep -q "Demo" README.md
