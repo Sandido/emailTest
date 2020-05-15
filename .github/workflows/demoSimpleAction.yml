@@ -1,6 +1,6 @@
 name: demoSimpleAction
 
-on:
+on: 
   pull_request:
     paths:
     - 'sdk/compute/**'
@@ -16,8 +16,8 @@ jobs:
       
     - name: ConditionalFail
       if: ${{ github.event_name == 'push' }}
-      run: echo This text should appear during a Push
-      exit 1;
+      run: echo This text should appear during a Push;
+        exit 1;
       
     - name: ConditionalSuccess
       if: ${{ github.event_name == 'pull_request' }}
