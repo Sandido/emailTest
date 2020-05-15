@@ -22,6 +22,12 @@ jobs:
     - name: ConditionalPR
       if: ${{ github.event_name == 'pull_request' }}
       run: echo This text should appear during PR creation
+    
+    - name: Hello world action step
+      id: hello
+      uses: haagha/custom-docker-action@v9
+      with:
+        who-to-greet: 'Haider2'
       
     - name: Check README has Demo text
       run: grep -q "Demo" README.md
