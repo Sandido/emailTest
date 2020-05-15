@@ -24,4 +24,4 @@ jobs:
       run: echo This text should appear during PR creation
       
     - name: Check a file has certain text
-      run: grep -q "Demo" Readme.md
+      run: grep -q "Demo" README.md
